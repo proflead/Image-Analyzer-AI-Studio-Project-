@@ -50,13 +50,13 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-900 text-gray-100 font-sans p-4 sm:p-6 lg:p-8">
+    <div className="min-h-screen bg-gray-100 text-gray-800 font-sans p-4 sm:p-6 lg:p-8">
       <div className="max-w-7xl mx-auto">
         <header className="text-center mb-8">
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500">
+          <h1 className="text-4xl sm:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-600">
             Image Analyzer & Finder
           </h1>
-          <p className="mt-2 text-lg text-gray-400">
+          <p className="mt-2 text-lg text-gray-600">
             Let Gemini describe your image and find similar ones across the web.
           </p>
         </header>
@@ -71,13 +71,13 @@ const App: React.FC = () => {
             <button
               onClick={handleAnalyzeClick}
               disabled={!imageFile || isLoading}
-              className="w-full py-3 px-6 bg-indigo-600 text-white font-semibold rounded-lg shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:ring-indigo-500 transition-all duration-200 disabled:bg-gray-700 disabled:cursor-not-allowed disabled:text-gray-400"
+              className="w-full py-3 px-6 bg-indigo-600 text-white font-semibold rounded-lg shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500 transition-all duration-200 disabled:bg-gray-300 disabled:cursor-not-allowed disabled:text-gray-500"
             >
               {isLoading ? 'Analyzing...' : 'Analyze Image'}
             </button>
           </div>
 
-          <div className="bg-gray-800/50 p-6 rounded-lg border border-gray-700 min-h-[300px] flex items-center justify-center">
+          <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm min-h-[300px] flex items-center justify-center">
             {isLoading ? (
               <Loader />
             ) : error ? (

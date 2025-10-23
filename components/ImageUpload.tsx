@@ -41,13 +41,13 @@ export const ImageUpload: React.FC<ImageUploadProps> = ({ onImageUpload, onClear
         className="hidden"
         accept="image/png, image/jpeg, image/webp"
       />
-      <div className="w-full aspect-video bg-gray-800 border-2 border-dashed border-gray-600 rounded-lg flex items-center justify-center relative overflow-hidden">
+      <div className="w-full aspect-video bg-white border-2 border-dashed border-gray-300 rounded-lg flex items-center justify-center relative overflow-hidden shadow-sm">
         {imagePreviewUrl ? (
           <>
             <img src={imagePreviewUrl} alt="Preview" className="w-full h-full object-contain" />
             <button
               onClick={onClear}
-              className="absolute top-2 right-2 bg-red-600 hover:bg-red-700 text-white rounded-full p-2 transition-transform transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:ring-red-500"
+              className="absolute top-2 right-2 bg-red-600 hover:bg-red-700 text-white rounded-full p-2 transition-transform transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-red-500"
               aria-label="Clear image"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -59,11 +59,11 @@ export const ImageUpload: React.FC<ImageUploadProps> = ({ onImageUpload, onClear
           <div className="text-center">
             <button
               onClick={handleUploadClick}
-              className="px-6 py-3 bg-indigo-600 text-white font-semibold rounded-lg shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:ring-indigo-500 transition-all duration-200"
+              className="px-6 py-3 bg-indigo-600 text-white font-semibold rounded-lg shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-indigo-500 transition-all duration-200"
             >
               Upload an Image
             </button>
-            <p className="mt-2 text-sm text-gray-400">PNG, JPG, or WEBP</p>
+            <p className="mt-2 text-sm text-gray-500">PNG, JPG, or WEBP</p>
           </div>
         )}
       </div>
